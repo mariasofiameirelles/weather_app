@@ -52,6 +52,7 @@ h3 {
 }
 .row {
   display: flex;
+  align-items: center;
 }
 .column {
   flex: 20%;
@@ -76,4 +77,7 @@ h3 {
   font-family: "Cabin", sans-serif;
   text-align: center;
   font-weight: bold;
+}
+.center {
+  text-align: center;
 }

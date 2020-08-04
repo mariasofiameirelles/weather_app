@@ -22,17 +22,19 @@
           <input type="search" placeholder="Type a city.." autofocus="on" autocomplete="off" id="city-input"
             class="form-control shadow-sm" />
         </form>
-        <button type="submit" value="search">Search</button>
+        <button type="submit" value="search">Search  </button>
         <button id="current-location-button">Current</button>
+       <div class="overview">
         <h1 id="city">
         </h1>
         <ul>
           <li id="date"> </li>
           <li id="description"> </li>
         </ul>
+        </div>
         <img src="cloudy.png" class="atual" alt="currentWeather" width="300px" />
 
-        <div class="row">
+        <div class="center">
           <span class="temperature" id="temperature"></span>
           <span class="units">
             <a href="#" id="celsius-link">ºC </a>|
@@ -106,6 +108,12 @@
               </div>
             </div>
           </div>
+          <small>
+            <br>
+            <a href="https://github.com/mariasofiameirelles/weather_app.git"
+            target="_blank">Open-source code</a>
+            by Maria Sofia Meirelles
+          </small>
           <script src="index.js"></script>
   </body>
 

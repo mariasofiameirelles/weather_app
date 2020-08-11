@@ -23,7 +23,6 @@
             class="form-control shadow-sm" />
         </form>
         <button type="submit" value="search">Search  </button>
-        <button id="current-location-button">Current</button>
        <div class="overview">
         <h1 id="city">
         </h1>
@@ -32,9 +31,12 @@
           <li id="description"> </li>
         </ul>
         </div>
-        <img src="cloudy.png" class="atual" alt="currentWeather" width="300px" />
 
-        <div class="center">
+        <div class="container">
+          <div class="col-6">
+            <div class="clearfix weather-temperature"></div>
+            <img src="" alt="Clear" id="icon"/>
+          </div>
           <span class="temperature" id="temperature"></span>
           <span class="units">
             <a href="#" id="celsius-link">ºC </a>|
@@ -45,75 +47,16 @@
           <li>Humidity: <span id="humidity"></span>%</li>
           <li>Wind: <span id="wind"></span> km/h</li>
           <br>
-          <div class="container">
-            <div class="days">
-              <div class="row">
-                <div class="col-sm">
-                  3 July
-                </div>
-                <div class="col-sm">
-                  4 July
-                </div>
-                <div class="col-sm">
-                  5 July
-                </div>
-                <div class="col-sm">
-                  6 July
-                </div>
-                <div class="col-sm">
-                  7 July
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="icon">
-              <div class="row">
-                <div class="column">
-                  <img src="rain.png" width="100px">
-                </div>
-                <div class="column">
-                  <img src="thunder.png" width="100px">
-                </div>
-                <div class="column">
-                  <img src="partiallysun.png" width="100px">
-                </div>
-                <div class="column">
-                  <img src="sun.png" width="100px">
-                </div>
-                <div class="column">
-                  <img src="windy.png" width="100px">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="days">
-              <div class="row">
-                <div class="col-sm">
-                  11º-16ºC|ºF
-                </div>
-                <div class="col-sm">
-                  12º-15ºC|ºF
-                </div>
-                <div class="col-sm">
-                  14º-18ºC|ºF
-                </div>
-                <div class="col-sm">
-                  16º-20ºC|ºF
-                </div>
-                <div class="col-sm">
-                  14º-18ºC|ºF
-                </div>
-              </div>
-            </div>
-          </div>
+          </ul>
+          <div class="row weather-forecast" id="forecast"></div>
           <small>
             <br>
+            <h4>
             <a href="https://github.com/mariasofiameirelles/weather_app.git"
             target="_blank">Open-source code</a>
             by Maria Sofia Meirelles
           </small>
+          </h4>
           <script src="index.js"></script>
   </body>
 

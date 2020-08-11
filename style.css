@@ -57,6 +57,7 @@ h3 {
 .column {
   flex: 20%;
   padding: 5px;
+  align-items: center;
 }
 
 .temperature {
@@ -78,6 +79,46 @@ h3 {
   text-align: center;
   font-weight: bold;
 }
-.center {
+
+.container {
+  position: relative;
+  justify-content: center;
+}
+
+.weather-forecast-temperature {
+  color: aliceblue;
+  font-size: 20px;
+  font-family: "Cabin", sans-serif;
   text-align: center;
+  font-weight: bold;
+}
+
+.formatHours {
+  color: aliceblue;
+  font-size: 20px;
+  font-family: "Cabin", sans-serif;
+  text-align: center;
+  font-weight: bold;
+}
+
+.searchCity {
+  color: aliceblue;
+  font-size: 20px;
+  font-family: "Cabin", sans-serif;
+  text-align: center;
+  font-weight: bold;
+}
+.displayForecast {
+  color: aliceblue;
+  font-size: 20px;
+  font-family: "Cabin", sans-serif;
+  text-align: center;
+  font-weight: bold;
+}
+h4 {
+  color: aliceblue;
+  font-size: 20px;
+  font-family: "Cabin", sans-serif;
+  text-align: center;
+  font-weight: bold;
 }

@@ -63,10 +63,7 @@ function displayTemperature(response) {
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
-  iconElement.setAttribute(
-    "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-  );
+  iconElement.setAttribute("src", changeImage(response.data.weather[0].icon));
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
@@ -78,20 +75,21 @@ function displayForecast(response) {
   for (let index = 0; index < 6; index++) {
     forecast = response.data.list[index];
     forecastElement.innerHTML += `
-    <div class="col-2">
+    <div class="col-2 text-center">
       <h3>
         ${formatHours(forecast.dt * 1000)}
       </h3>
-         <img
-        src="http://openweathermap.org/img/wn/${
-          forecast.weather[0].icon
-        }@2x.png"
+      <img
+        class="forecast-icon"
+        src="${changeImage(forecast.weather[0].icon)}"
+        alt="${forecast.weather[0].description}"
       />
-
+​
       <div class="weather-forecast-temperature">
         <strong>
-          ${Math.round(forecast.main.temp_max)}°
-        ${Math.round(forecast.main.temp_min)}°
+          ${Math.round(forecast.main.temp_min)}°
+        ${Math.round(forecast.main.temp_max)}°
+        
         </strong>
       </div>
     </div>
@@ -100,32 +98,34 @@ function displayForecast(response) {
 }
 
 function changeImage(icon) {
-  let iconCondition = document.querySelectorAll("#current-weather-img");
+  let iconCondition = "";
   if (icon === "01d") {
-    iconCondition.setAttribute(`sun.png`);
-  } else if (icon === "01n.") {
-    iconCondition.setAttribute(`moon.png`);
-  } else if (icon === "02d.") {
-    iconCondition.setAttribute(`partiallysun.png`);
-  } else if (icon === "02n.") {
-    iconCondition.setAttribute(`partiallynight.png`);
-  } else if (icon === "03d." || icon === "03n.") {
-    iconCondition.setAttribute(`cloudy.png`);
-  } else if (icon === "04d." || icon === "04n.") {
-    iconCondition.setAttribute(`cloudy.png`);
-  } else if (icon === "09d." || icon === "09n.") {
-    iconCondition.setAttribute(`rain.png`);
-  } else if (icon === "10d." || icon === "10n.") {
-    iconCondition.setAttribute(`rain.png`);
-  } else if (icon === "11d." || icon === "11n.") {
-    iconCondition.setAttribute(`thunder.png`);
-  } else if (icon === "13d." || icon === "13n.") {
-    iconCondition.setAttribute(`snow.png`);
-  } else if (icon === "50d." || icon === "50n.") {
-    iconCondition.setAttribute(`windy.png`);
+    iconCondition = `./sun.png`;
+  } else if (icon === "01n") {
+    iconCondition = `./moon.png`;
+  } else if (icon === "02d") {
+    iconCondition = `./partiallysun.png`;
+  } else if (icon === "02n") {
+    iconCondition = `./partiallynight.png`;
+  } else if (icon === "03d" || icon === "03n") {
+    iconCondition = `./cloudy.png`;
+  } else if (icon === "04d" || icon === "04n") {
+    iconCondition = `./cloudy.png`;
+  } else if (icon === "09d" || icon === "09n") {
+    iconCondition = `./rain.png`;
+  } else if (icon === "10d" || icon === "10n") {
+    iconCondition = `./rain.png`;
+  } else if (icon === "11d" || icon === "11n") {
+    iconCondition = `./thunder.png`;
+  } else if (icon === "13d" || icon === "13n") {
+    iconCondition = `./snow.png`;
+  } else if (icon === "50d" || icon === "50n") {
+    iconCondition = `./windy.png`;
   } else {
-    iconCondition.setAttribute(`cloudy.png`);
+    iconCondition = `http://openweathermap.org/img/wn/${icon}@2x.png`;
   }
+
+  return iconCondition;
 }
 
 function searchCity(city) {

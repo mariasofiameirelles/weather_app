@@ -30,7 +30,8 @@ h1 {
   color: aliceblue;
   text-align: center;
 }
-​ .atual {
+
+.atual {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -59,7 +60,8 @@ h3 {
   padding: 5px;
   align-items: center;
 }
-​ .temperature {
+
+.temperature {
   width: 600px;
   margin: auto;
   color: aliceblue;
@@ -68,7 +70,8 @@ h3 {
   text-align: center;
   font-weight: bold;
 }
-​ .units {
+
+.units {
   width: 600px;
   margin: auto;
   color: aliceblue;
@@ -77,25 +80,29 @@ h3 {
   text-align: center;
   font-weight: bold;
 }
-​ .container {
+
+.container {
   position: relative;
   justify-content: center;
 }
-​ .weather-forecast-temperature {
+
+.weather-forecast-temperature {
   color: aliceblue;
   font-size: 20px;
   font-family: "Cabin", sans-serif;
   text-align: center;
   font-weight: bold;
 }
-​ .formatHours {
+
+.formatHours {
   color: aliceblue;
   font-size: 20px;
   font-family: "Cabin", sans-serif;
   text-align: center;
   font-weight: bold;
 }
-​ .searchCity {
+
+.searchCity {
   color: aliceblue;
   font-size: 20px;
   font-family: "Cabin", sans-serif;
@@ -116,9 +123,11 @@ h4 {
   text-align: center;
   font-weight: bold;
 }
-​ .weather-icon {
+
+.weather-icon {
   width: 100px;
 }
-​ .forecast-icon {
+
+.forecast-icon {
   width: 50px;
 }

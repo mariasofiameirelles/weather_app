@@ -84,10 +84,10 @@ function displayForecast(response) {
         src="${changeImage(forecast.weather[0].icon)}"
         alt="${forecast.weather[0].description}"
       />
-​
+
       <div class="weather-forecast-temperature">
         <strong>
-          ${Math.round(forecast.main.temp_min)}°
+        ${Math.round(forecast.main.temp_min)}°  
         ${Math.round(forecast.main.temp_max)}°
         
         </strong>
@@ -106,7 +106,7 @@ function changeImage(icon) {
   } else if (icon === "02d") {
     iconCondition = `./partiallysun.png`;
   } else if (icon === "02n") {
-    iconCondition = `./partiallynight.png`;
+    iconCondition = `./partyallynight.png`;
   } else if (icon === "03d" || icon === "03n") {
     iconCondition = `./cloudy.png`;
   } else if (icon === "04d" || icon === "04n") {

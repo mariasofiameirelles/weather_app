@@ -1,51 +1,18 @@
 .weather-app {
-  background-image: linear-gradient(to left, #ffecd2 0%, #fcb69f 100%);
-  border: 1px solid white;
-  padding: 15px;
-  margin: 10px auto;
-  border-radius: 10px;
-  max-width: 800px;
-}
-button {
-  display: block;
-  margin-top: 10px;
-  margin-left: 0 auto;
-  padding: 10px;
-}
-ul {
-  display: block;
+  display: grid;
   font-size: 20px;
-  color: aliceblue;
-  font-family: "Cabin", sans-serif;
-  text-align: center;
-  list-style-position: inside;
-  font-weight: bold;
-  list-style: none;
-  padding: 0;
-}
-h1 {
-  display: block;
-  font-size: 50px;
   font-family: "Cabin", sans-serif;
   color: aliceblue;
-  text-align: center;
 }
 
-.atual {
+.Weather .weather-temperature {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 200px;
 }
-h3 {
-  display: block;
-  font-size: 20px;
-  font-family: "Cabin", sans-serif;
-  text-align: center;
-  color: aliceblue;
-  font-weight: bold;
-}
-.days {
+
+.Weather .weather-date {
   display: grid;
   font-size: 20px;
   font-family: "Cabin", sans-serif;
@@ -81,12 +48,7 @@ h3 {
   font-weight: bold;
 }
 
-.container {
-  position: relative;
-  justify-content: center;
-}
-
-.weather-forecast-temperature {
+.Weather .weather-forecast-temperature {
   color: aliceblue;
   font-size: 20px;
   font-family: "Cabin", sans-serif;
@@ -116,15 +78,8 @@ h3 {
   text-align: center;
   font-weight: bold;
 }
-h4 {
-  color: aliceblue;
-  font-size: 20px;
-  font-family: "Cabin", sans-serif;
-  text-align: center;
-  font-weight: bold;
-}
 
-.weather-icon {
+.Weather.weather-icon {
   width: 100px;
 }
 
